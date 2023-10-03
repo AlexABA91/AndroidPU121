@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidPU121</string>
+
+    <string name="main_btn_views" translatable="false">Елементы UI</string>
+    <string name="main_tv_title" translatable="false">Знакомство с Android</string>
+
+    <string name="views_tv_title" translatable="false">Views</string>
+    <string name="views_tv_horizontal_layout" translatable="false">\'LayoutConstraint: Horizontal\'</string>
+</resources>
