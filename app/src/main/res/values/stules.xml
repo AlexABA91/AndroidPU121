@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="calc_btn_func">
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/calc_btn_func</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_height">match_parent</item>
+
+    </style>
+    <style name="calc_btn_num">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/calc_btn_num</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="calc_btn_equal">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:background">@drawable/calc_btn_equal</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="calc_tr">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+</resources>

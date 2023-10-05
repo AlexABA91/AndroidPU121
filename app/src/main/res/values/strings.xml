@@ -2,8 +2,32 @@
     <string name="app_name">AndroidPU121</string>
 
     <string name="main_btn_views" translatable="false">Елементы UI</string>
+    <string name="main_btn_calc" translatable="false">Калькулятор</string>
     <string name="main_tv_title" translatable="false">Знакомство с Android</string>
 
     <string name="views_tv_title" translatable="false">Views</string>
     <string name="views_tv_horizontal_layout" translatable="false">\'LayoutConstraint: Horizontal\'</string>
+
+    <string name="calc_tv_title">Калькулятор</string>
+    <string name="calc_btn_percent">%</string>
+    <string name="calc_btn_ce">CE</string>
+    <string name="calc_btn_c">C</string>
+    <string name="calc_btn_backspace">\u232b</string>
+    <string name="calc_btn_inverse">\u00B9/\u2093</string>
+    <string name="calc_btn_square">x\u00B2</string>
+    <string name="calc_btn_sqrt">\u221A\u2093\u0304</string>
+    <string name="calc_btn_divide">\u00F7</string>
+    <string name="calc_btn_seven">7</string>
+    <string name="calc_btn_eight">8</string>
+    <string name="calc_btn_nine">9</string>
+    <string name="calc_btn_multiply">\u00d7</string>
+    <string name="calc_btn_four">4</string>
+    <string name="calc_btn_five">5</string>
+    <string name="calc_btn_six">6</string>
+    <string name="calc_btn_minus">\u002D</string>
+    <string name="calc_btn_one">1</string>
+    <string name="calc_btn_two">2</string>
+    <string name="calc_btn_three">3</string>
+    <string name="calc_btn_equal">\u003D</string>
+
 </resources>

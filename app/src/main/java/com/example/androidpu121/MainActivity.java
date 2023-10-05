@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
         // робота с елиментами UI (Views) - только после setContentView
         tvTitle = findViewById(R.id.main_tv_title);
         Button btnViews =  findViewById(R.id.main_btn_views);
-
         btnViews.setOnClickListener(this::btnViewsClick);
+        Button btnCalc =  findViewById(R.id.main_btn_calc);
+        btnCalc.setOnClickListener(this::btnCalcClick);
     }
     //обработчики событий имеют одинаковый прототип
      private void btnViewsClick(View view){ // view -sender
@@ -27,4 +28,9 @@ public class MainActivity extends AppCompatActivity {
                  ViewsActivity.class);
          startActivity(intent);
      }
+    private void btnCalcClick(View view){ // view -sender
+        Intent intent = new Intent(this.getApplicationContext(),
+                CalcActivity.class);
+        startActivity(intent);
+    }
 }
