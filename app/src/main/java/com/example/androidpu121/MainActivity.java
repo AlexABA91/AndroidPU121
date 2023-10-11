@@ -15,12 +15,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // робота с елиментами UI (Views) - только после setContentView
+        // робота с элементами UI (Views) - только после setContentView
         tvTitle = findViewById(R.id.main_tv_title);
         Button btnViews =  findViewById(R.id.main_btn_views);
         btnViews.setOnClickListener(this::btnViewsClick);
+
         Button btnCalc =  findViewById(R.id.main_btn_calc);
         btnCalc.setOnClickListener(this::btnCalcClick);
+
+        Button btnGame =  findViewById(R.id.main_btn_2048);
+        btnGame.setOnClickListener(this::btnGameClick);
     }
     //обработчики событий имеют одинаковый прототип
      private void btnViewsClick(View view){ // view -sender
@@ -31,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
     private void btnCalcClick(View view){ // view -sender
         Intent intent = new Intent(this.getApplicationContext(),
                 CalcActivity.class);
+        startActivity(intent);
+    }
+    private void btnGameClick(View view){ // view -sender
+        Intent intent = new Intent(this.getApplicationContext(),
+                Game_Activity.class);
         startActivity(intent);
     }
 }

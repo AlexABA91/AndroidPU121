@@ -36,7 +36,7 @@
 
         <Button
             android:id="@+id/main_btn_views"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/main_btn_views"
             android:textColor="#CDB4B2"
@@ -49,7 +49,7 @@
 
         <Button
             android:id="@+id/main_btn_calc"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/main_btn_calc"
             android:textColor="#CDB4B2"
@@ -59,6 +59,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/main_tv_title"
             app:layout_constraintVertical_bias="0.384" />
+        <Button
+            android:id="@+id/main_btn_2048"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_btn_2048"
+            android:textColor="#CDB4B2"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_tv_title"
+            app:layout_constraintVertical_bias="0.515" />
     </LinearLayout>
 
 

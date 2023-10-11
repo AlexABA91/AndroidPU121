@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">AndroidPU121</string>
 
-    <string name="main_btn_views" translatable="false">Елементы UI</string>
+    <string name="main_btn_views" translatable="false">Элементы UI</string>
     <string name="main_btn_calc" translatable="false">Калькулятор</string>
     <string name="main_tv_title" translatable="false">Знакомство с Android</string>
+    <string name="main_btn_2048" translatable="false">2048</string>
+
+    <string name="game_tv_title">2048</string>
+    <string name="game_tv_hint"> Объединяйте числа чтобы получить 2048!</string>
+    <string name="game_btn_new"> Новая</string>
+    <string name="game_btn_undo">Отмена</string>
+
 
     <string name="views_tv_title" translatable="false">Views</string>
     <string name="views_tv_horizontal_layout" translatable="false">\'LayoutConstraint: Horizontal\'</string>
@@ -17,17 +24,22 @@
     <string name="calc_btn_square">x\u00B2</string>
     <string name="calc_btn_sqrt">\u221A\u2093\u0304</string>
     <string name="calc_btn_divide">\u00F7</string>
-    <string name="calc_btn_seven">7</string>
-    <string name="calc_btn_eight">8</string>
-    <string name="calc_btn_nine">9</string>
-    <string name="calc_btn_multiply">\u00d7</string>
-    <string name="calc_btn_four">4</string>
-    <string name="calc_btn_five">5</string>
-    <string name="calc_btn_six">6</string>
-    <string name="calc_btn_minus">\u002D</string>
-    <string name="calc_btn_one">1</string>
-    <string name="calc_btn_two">2</string>
-    <string name="calc_btn_three">3</string>
-    <string name="calc_btn_equal">\u003D</string>
+    <string name="calc_btn_7">7</string>
+    <string name="calc_btn_8">8</string>
+    <string name="calc_btn_9">9</string>
+    <string name="calc_btn_multiply">\u00D7</string>
+    <string name="calc_btn_4">4</string>
+    <string name="calc_btn_5">5</string>
+    <string name="calc_btn_6">6</string>
+    <string name="calc_btn_minus">-</string>
+    <string name="calc_btn_1">1</string>
+    <string name="calc_btn_2">2</string>
+    <string name="calc_btn_3">3</string>
+    <string name="calc_btn_plus">+</string>
+    <string name="calc_btn_plus_minus">-+</string>
+    <string name="calc_btn_0">\u2205</string>
+    <string name="calc_btn_comma">,</string>
+    <string name="calc_btn_equal">=</string>
+    <string name="calc_div_zero_message">Cannot divide by zero</string>
 
 </resources>

@@ -3,6 +3,28 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="game_title_background">#E8C95F</color>
+    <color name="game_title_foreground">#FEFAFE</color>
+    <color name="game_score_foreground">#FEFAFE</color>
+    <color name="game_score_background">#0B0801</color>
+    <color name="game_btn_background">#F55F3B</color>
+    <color name="game_btn_border">#903823</color>
+    <color name="game_hint">#8F8A84</color>
+    <color name="game_tl_background">#A49485</color>
+    <color name="game_tl_tv">#C8BBAB</color>
+    <color name="game_tv_2">#EEE3D9</color>
+    <color name="game_tv_4">#EFDDD2</color>
+    <color name="game_tv_8">#EEB07E</color>
+    <color name="game_tv_16">#F0955F</color>
+    <color name="game_tv_32">#F87A5C</color>
+    <color name="game_tv_64">#F16238</color>
+    <color name="game_tv_128">#E6C977</color>
+    <color name="game_tv_256">#E4CB66</color>
+    <color name="game_tv_512">#E2C563</color>
+    <color name="game_tv_1024">#F2C137</color>
+    <color name="game_tv_2048">#EDC130</color>
+    <color name="game_tv_over">#EA4D56</color>
+
     <color name="calc_background">#202020</color>
     <color name="calc_expression_text">#A5A5A5</color>
     <color name="calc_result_text">#FDFDFD</color>

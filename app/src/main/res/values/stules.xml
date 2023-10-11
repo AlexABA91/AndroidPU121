@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="calc_btn_func">
+    <style name="calc_btn">
         <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="calc_btn_func" parent="calc_btn">
         <item name="android:background">@drawable/calc_btn_func</item>
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_margin">2dp</item>
-        <item name="backgroundTint">@null</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:layout_height">match_parent</item>
-
     </style>
-    <style name="calc_btn_num">
-        <item name="android:layout_weight">1</item>
-        <item name="android:layout_height">match_parent</item>
+    <style name="calc_btn_num"  parent="calc_btn" >
         <item name="android:background">@drawable/calc_btn_num</item>
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_margin">2dp</item>
-        <item name="backgroundTint">@null</item>
-        <item name="android:textSize">20sp</item>
     </style>
-    <style name="calc_btn_equal">
-        <item name="android:layout_weight">1</item>
-        <item name="android:layout_height">match_parent</item>
-
+    <style name="calc_btn_equal" parent="calc_btn">
         <item name="android:background">@drawable/calc_btn_equal</item>
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_margin">2dp</item>
-        <item name="backgroundTint">@null</item>
-        <item name="android:textSize">20sp</item>
     </style>
     <style name="calc_tr">
         <item name="android:layout_weight">1</item>
         <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="game_btn_func">
+       <item name="android:background">@drawable/game_btn_func</item>
+        <item name="android:layout_marginTop">5dp</item>
+      <item name="android:layout_width">match_parent</item>
+      <item name="android:layout_weight">3</item>
+      <item name="android:layout_height">0dp</item>
+      <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="game_table_tv">
+        <item name="android:background">@drawable/game_tv_empty</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginRight">7dp</item>
+        <item name="android:layout_marginBottom">7dp</item>
+        <item name="android:radius">5dp</item>
     </style>
 
 </resources>
