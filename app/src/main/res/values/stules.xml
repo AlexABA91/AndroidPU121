@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="calc_btn">
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">0dp</item>
@@ -12,34 +13,111 @@
     <style name="calc_btn_func" parent="calc_btn">
         <item name="android:background">@drawable/calc_btn_func</item>
     </style>
-    <style name="calc_btn_num"  parent="calc_btn" >
+
+    <style name="calc_btn_num" parent="calc_btn">
         <item name="android:background">@drawable/calc_btn_num</item>
     </style>
+
     <style name="calc_btn_equal" parent="calc_btn">
         <item name="android:background">@drawable/calc_btn_equal</item>
     </style>
+
     <style name="calc_tr">
         <item name="android:layout_weight">1</item>
         <item name="android:layout_height">0dp</item>
     </style>
 
     <style name="game_btn_func">
-       <item name="android:background">@drawable/game_btn_func</item>
+        <item name="android:background">@drawable/game_btn_func</item>
         <item name="android:layout_marginTop">5dp</item>
-      <item name="android:layout_width">match_parent</item>
-      <item name="android:layout_weight">3</item>
-      <item name="android:layout_height">0dp</item>
-      <item name="backgroundTint">@null</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="backgroundTint">@null</item>
     </style>
 
-    <style name="game_table_tv">
-        <item name="android:background">@drawable/game_tv_empty</item>
+    <style name="game_table">
+
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_marginRight">7dp</item>
         <item name="android:layout_marginBottom">7dp</item>
         <item name="android:radius">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="game_table_0" parent="game_table">
+        <item name="android:background">@drawable/game_tv_0</item>
+        <item name="android:textColor">@color/game_fn_0</item>
+    </style>
+
+    <style name="game_table_2" parent="game_table">
+        <item name="android:background">@drawable/game_tv_2</item>
+        <item name="android:textColor">@color/game_fn_2</item>
+
+    </style>
+
+    <style name="game_table_4" parent="game_table">
+        <item name="android:background">@drawable/game_tv_4</item>
+        <item name="android:textColor">@color/game_fn_4</item>
+
+    </style>
+
+    <style name="game_table_8" parent="game_table">
+        <item name="android:background">@drawable/game_tv_8</item>
+        <item name="android:textColor">@color/game_fn_8</item>
+    </style>
+
+    <style name="game_table_16" parent="game_table">
+        <item name="android:background">@drawable/game_tv_16</item>
+        <item name="android:textColor">@color/game_fn_16</item>
+    </style>
+
+    <style name="game_table_32" parent="game_table">
+        <item name="android:background">@drawable/game_tv_32</item>
+        <item name="android:textColor">@color/game_fn_32</item>
+    </style>
+
+    <style name="game_table_64" parent="game_table">
+        <item name="android:background">@drawable/game_tv_64</item>
+        <item name="android:textColor">@color/game_fn_64</item>
+    </style>
+
+    <style name="game_table_128" parent="game_table">
+        <item name="android:background">@drawable/game_tv_128</item>
+        <item name="android:textColor">@color/game_fn_128</item>
+        <item name="android:textSize">38sp</item>
+    </style>
+
+    <style name="game_table_256" parent="game_table">
+        <item name="android:textColor">@color/game_fn_256</item>
+        <item name="android:background">@drawable/game_tv_256</item>
+        <item name="android:textSize">38sp</item>
+
+    </style>
+
+    <style name="game_table_512" parent="game_table">
+        <item name="android:textColor">@color/game_fn_512</item>
+        <item name="android:background">@drawable/game_tv_512</item>
+        <item name="android:textSize">38sp</item>
+
+    </style>
+
+    <style name="game_table_1024" parent="game_table">
+        <item name="android:textColor">@color/game_fn_1024</item>
+        <item name="android:background">@drawable/game_tv_1024</item>
+        <item name="android:textSize">32sp</item>
+
+    </style>
+
+    <style name="game_table_2048" parent="game_table">
+        <item name="android:textColor">@color/game_fn_2048</item>
+        <item name="android:background">@drawable/game_tv_2048</item>
+        <item name="android:textSize">32sp</item>
+
     </style>
 
 </resources>

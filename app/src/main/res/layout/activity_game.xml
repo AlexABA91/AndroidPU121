@@ -7,14 +7,13 @@
     android:id="@+id/game_layout"
     android:orientation="vertical"
     tools:context=".Game_Activity"
-    android:paddingBottom="200dp">
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginHorizontal="40dp"
-        android:layout_marginVertical="20dp"
-        >
+        android:layout_marginVertical="20dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -22,16 +21,15 @@
             android:text="@string/game_tv_title"
             android:gravity="center"
             android:textColor="@color/game_title_foreground"
-            android:background="@color/game_title_background"
-            />
+            android:background="@color/game_title_background"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:layout_marginStart="7dp"
-                >
+                android:layout_marginStart="7dp">
                 <TextView
+                    android:id="@+id/game_tv_score"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="4"
@@ -41,29 +39,27 @@
                     android:text="SCORE\n520"/>
                 <Button
                     style="@style/game_btn_func"
-                    android:text="@string/game_btn_new"
-                   />
+                    android:text="@string/game_btn_new"/>
             </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="7dp"
-            >
+            android:layout_marginStart="7dp">
             <TextView
+                android:id="@+id/game_tv_best"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="4"
                 android:textColor="@color/game_score_foreground"
                 android:background="@color/game_score_background"
                 android:gravity="center"
-                android:text="SCORE\n520"/>
+                android:text="BEST\n520"/>
             <Button
                 android:id="@+id/game_btn_func"
                 style="@style/game_btn_func"
-                android:text="@string/game_btn_undo"
-                />
+                android:text="@string/game_btn_undo"/>
         </LinearLayout>
     </LinearLayout>
     <TextView
@@ -73,50 +69,80 @@
         android:text="@string/game_tv_hint"
         android:textColor="@color/game_hint"
         android:textAlignment="center"
-        android:layout_marginBottom="20dp"
-        />
+        android:layout_marginBottom="20dp"/>
     <TableLayout
+        android:id="@+id/game_table"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="40dp"
         android:background="@color/game_tl_background"
         android:paddingTop="7dp"
         android:paddingLeft="7dp"
         >
         <TableRow
             android:layout_height="0dp"
-            android:layout_weight="1"
-            >
-            <TextView style="@style/game_table_tv"
-                />
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
+            android:layout_weight="1">
+            <TextView style="@style/game_table_0"
+                android:id="@+id/game_cell_00"
+                android:text="@string/game_tv_0"/>
+            <TextView style="@style/game_table_2"
+                android:id="@+id/game_cell_01"
+                android:text="@string/game_tv_4"/>
+            <TextView style="@style/game_table_4"
+                android:id="@+id/game_cell_02"
+                android:text="@string/game_tv_2"/>
+            <TextView style="@style/game_table_8"
+                android:id="@+id/game_cell_03"
+                android:text="@string/game_tv_8"/>
         </TableRow>
         <TableRow
             android:layout_height="0dp"
             android:layout_weight="1">
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
+            <TextView
+                android:id="@+id/game_cell_10"
+                style="@style/game_table_16"
+                android:text="@string/game_tv_16"/>
+            <TextView style="@style/game_table_32"
+                android:id="@+id/game_cell_11"
+                android:text="@string/game_tv_32"/>
+            <TextView style="@style/game_table_64"
+                android:id="@+id/game_cell_12"
+                android:text="@string/game_tv_64"/>
+            <TextView style="@style/game_table_128"
+                android:id="@+id/game_cell_13"
+                android:text="@string/game_tv_128"/>
         </TableRow>
         <TableRow
             android:layout_height="0dp"
             android:layout_weight="1">
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
+            <TextView
+                android:id="@+id/game_cell_20"
+                style="@style/game_table_16"
+                android:text="@string/game_tv_16"/>
+            <TextView style="@style/game_table_32"
+                android:text="@string/game_tv_32"
+                android:id="@+id/game_cell_21"/>
+            <TextView style="@style/game_table_64"
+                android:text="@string/game_tv_64"
+                android:id="@+id/game_cell_22"/>
+            <TextView style="@style/game_table_128"
+                android:text="@string/game_tv_128"
+                android:id="@+id/game_cell_23"/>
         </TableRow>
         <TableRow
             android:layout_height="0dp"
             android:layout_weight="1">
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
-            <TextView style="@style/game_table_tv"/>
+            <TextView style="@style/game_table_16"
+                android:text="@string/game_tv_16"
+                android:id="@+id/game_cell_30"/>
+            <TextView style="@style/game_table_32"
+                android:text="@string/game_tv_32"
+                android:id="@+id/game_cell_31"/>
+            <TextView style="@style/game_table_64"
+                android:text="@string/game_tv_64"
+                android:id="@+id/game_cell_32"/>
+            <TextView style="@style/game_table_128"
+                android:text="@string/game_tv_128"
+                android:id="@+id/game_cell_33"/>
         </TableRow>
-
     </TableLayout>
 </LinearLayout>

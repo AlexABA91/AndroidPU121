@@ -12,17 +12,32 @@
     <color name="game_hint">#8F8A84</color>
     <color name="game_tl_background">#A49485</color>
     <color name="game_tl_tv">#C8BBAB</color>
+    <color name="game_fn_0">#C8BBAB</color>
     <color name="game_tv_2">#EEE3D9</color>
+    <color name="game_fn_2">#776E65</color>
     <color name="game_tv_4">#EFDDD2</color>
+    <color name="game_fn_4">#766C63</color>
+
     <color name="game_tv_8">#EEB07E</color>
+    <color name="game_fn_8">#F3F3F4</color>
+
     <color name="game_tv_16">#F0955F</color>
+    <color name="game_fn_16">#F8F5F1</color>
     <color name="game_tv_32">#F87A5C</color>
+    <color name="game_fn_32">#F8F5F1</color>
+
     <color name="game_tv_64">#F16238</color>
+    <color name="game_fn_64">#FEF7FE</color>
     <color name="game_tv_128">#E6C977</color>
+    <color name="game_fn_128">#FEF4EB</color>
     <color name="game_tv_256">#E4CB66</color>
+    <color name="game_fn_256">#F8F6EA</color>
     <color name="game_tv_512">#E2C563</color>
+    <color name="game_fn_512">#FEE8DE</color>
     <color name="game_tv_1024">#F2C137</color>
+    <color name="game_fn_1024">#F8F5F0</color>
     <color name="game_tv_2048">#EDC130</color>
+    <color name="game_fn_2048">#F8F5F1</color>
     <color name="game_tv_over">#EA4D56</color>
 
     <color name="calc_background">#202020</color>
