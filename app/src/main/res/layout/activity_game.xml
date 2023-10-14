@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginHorizontal="40dp"
-        android:layout_marginVertical="20dp">
+        android:layout_marginVertical="20dp"
+        >
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -144,5 +145,22 @@
                 android:text="@string/game_tv_128"
                 android:id="@+id/game_cell_33"/>
         </TableRow>
+
+
     </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:orientation="horizontal">
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="42dp"
+            android:layout_marginHorizontal="50dp"
+            android:text="@string/game_tv_sound"
+            app:layout_constraintTop_toBottomOf="@id/game_table"/>
+
+    </LinearLayout>
 </LinearLayout>
