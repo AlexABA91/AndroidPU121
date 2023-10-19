@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnGame =  findViewById(R.id.main_btn_2048);
         btnGame.setOnClickListener(this::btnGameClick);
+        Button btnRates =  findViewById(R.id.main_btn_rates);
+        btnRates.setOnClickListener(this::btnRatesClick);
     }
     //обработчики событий имеют одинаковый прототип
      private void btnViewsClick(View view){ // view -sender
@@ -40,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
     private void btnGameClick(View view){ // view -sender
         Intent intent = new Intent(this.getApplicationContext(),
                 Game_Activity.class);
+        startActivity(intent);
+
+    }
+    private void btnRatesClick(View view){ // view -sender
+        Intent intent = new Intent(this.getApplicationContext(),
+                RatesActivity.class);
         startActivity(intent);
     }
 }

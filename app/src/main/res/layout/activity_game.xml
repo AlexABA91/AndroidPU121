@@ -39,6 +39,7 @@
                     android:gravity="center"
                     android:text="SCORE\n520"/>
                 <Button
+                    android:id="@+id/game_btn_new"
                     style="@style/game_btn_func"
                     android:text="@string/game_btn_new"/>
             </LinearLayout>
@@ -58,7 +59,7 @@
                 android:gravity="center"
                 android:text="BEST\n520"/>
             <Button
-                android:id="@+id/game_btn_func"
+                android:id="@+id/game_btn_undo"
                 style="@style/game_btn_func"
                 android:text="@string/game_btn_undo"/>
         </LinearLayout>
