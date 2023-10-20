@@ -67,4 +67,7 @@
 <!--endregion-->
 
 <string name="rates_ex_thread">rates_ex_thread</string>
+<string name="rates_btn_by_alpha">По названию</string>
+<string name="rates_btn_by_curse">По курсу</string>
+<string name="rates_btn_by_reset">Сбросить</string>
 </resources>

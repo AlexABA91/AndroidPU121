@@ -6,29 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".RatesActivity">
 
-    <TextView
-        android:id="@+id/rates_tv_json"
+    <LinearLayout
+        android:id="@+id/rates_head"
         android:layout_width="match_parent"
-        android:layout_height="62dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/rates_tv_json"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/rates_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/rates_tv_json"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+                android:id="@+id/rates_btn_by_alpha"
+                android:layout_width="218dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/rates_btn_by_alpha" />
+
+            <Button
+                android:id="@+id/rates_btn_by_curse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/rates_btn_by_curse" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/rates_pt_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/rates_btn_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/rates_btn_by_reset" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/rates_result"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rates_head">
+
         <LinearLayout
             android:id="@+id/rates_container"
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
-       </ScrollView>
+            android:orientation="vertical" />
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
