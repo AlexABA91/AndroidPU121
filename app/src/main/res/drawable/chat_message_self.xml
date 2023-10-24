@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="20dp"/>
+    <corners android:bottomLeftRadius="0dp"/>
+    <stroke android:color="@color/game_btn_background"
+        android:width="2dp"/>
+    <solid android:color="@color/calc_btn_equal_background"/>
+</shape>

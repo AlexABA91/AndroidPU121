@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">AndroidPU121</string>
-<!-- Home-->
+    <!-- Home-->
     <string name="main_btn_views" translatable="false">Элементы UI</string>
     <string name="main_btn_calc" translatable="false">Калькулятор</string>
     <string name="main_tv_title" translatable="false">Знакомство с Android</string>
     <string name="main_btn_2048" translatable="false">2048</string>
     <string name="main_btn_rates" translatable="false">Курсы валют</string>
+    <string name="main_btn_chat" translatable="false">Чат</string>
 
-<!-- region   2048-->
+    <!-- region   2048-->
     <string name="game_tv_title">2048</string>
     <string name="game_tv_hint"> Объединяйте числа чтобы получить 2048!</string>
     <string name="game_btn_new"> Новая</string>
@@ -33,11 +34,11 @@
     <string name="game_over_yes">Да</string>
     <string name="game_over_undo">Ход назад</string>
     <string name="game_over_no">Нет</string>
-<!--endregion-->
+    <!--endregion-->
     <string name="views_tv_title" translatable="false">Views</string>
     <string name="views_tv_horizontal_layout" translatable="false">\'LayoutConstraint: Horizontal\'</string>
 
-<!--region    Calculator-->
+    <!--region    Calculator-->
     <string name="calc_tv_title">Калькулятор</string>
     <string name="calc_btn_percent">%</string>
     <string name="calc_btn_ce">CE</string>
@@ -64,10 +65,14 @@
     <string name="calc_btn_comma">,</string>
     <string name="calc_btn_equal">=</string>
     <string name="calc_div_zero_message">Cannot divide by zero</string>
-<!--endregion-->
+    <!--endregion-->
 
-<string name="rates_ex_thread">rates_ex_thread</string>
-<string name="rates_btn_by_alpha">По названию</string>
-<string name="rates_btn_by_curse">По курсу</string>
-<string name="rates_btn_by_reset">Сбросить</string>
+    <string name="rates_ex_thread">rates_ex_thread</string>
+    <string name="rates_btn_by_alpha">По названию</string>
+    <string name="rates_btn_by_curse">По курсу</string>
+    <string name="rates_btn_by_reset">Сбросить</string>
+<!-- region chat -->
+    <string name="chat_tv_title">Chat</string>
+
+<!--    endregion-->
 </resources>

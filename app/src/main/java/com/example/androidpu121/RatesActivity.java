@@ -37,7 +37,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
-
+// TODO: сделать в модальном окне конвертор валют
 public class RatesActivity extends AppCompatActivity {
     private TextView tvJson;
     private final String nbuRatesUrl = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json";
@@ -104,7 +104,6 @@ public class RatesActivity extends AppCompatActivity {
                 ).compare(r1.getTxt(),r2.getTxt())); // Comparator.comparing(NbuRate::getTxt));
         showResponse();
     }
-
     private void loadUrlData() {
         try (InputStream stream = new URL(nbuRatesUrl).openStream();) {
             ByteArrayOutputStream builder = new ByteArrayOutputStream();
