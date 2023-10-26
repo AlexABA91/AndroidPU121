@@ -5,38 +5,109 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
-
     <TextView
         android:id="@+id/chat_tv_title"
-        android:layout_width="452dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="@string/chat_tv_title"
+        android:text="Chat"
         app:layout_constraintHeight_percent="0.05"
-        app:layout_constraintBottom_toTopOf="@+id/chat_sv_container"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/chat_nik_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_tv_title"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/chat_tv_nik"/>
+
+        <EditText
+            android:background="@null"
+
+            android:id="@+id/chat_et_nik"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/chat_et_nik"
+            android:textColorHint="@color/calc_expression_text"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/chat_btn_newMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:background="@color/white"
+            android:src="@drawable/chat_message_no"
+             />
+
+    </LinearLayout>
 
     <ScrollView
         android:id="@+id/chat_sv_container"
-        android:layout_width="429dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.75"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHeight_percent="0.70"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/chat_nik_layout"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:id="@+id/chat_layout_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical" />
 
     </ScrollView>
 
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_sv_container">
+
+        <EditText
+            android:id="@+id/chat_et_message"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:inputType="textMultiLine"
+            android:lines="2"
+
+            android:textColorHint="@color/calc_expression_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <ImageButton
+            android:id="@+id/chat_btn_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_send" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

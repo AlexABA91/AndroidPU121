@@ -6,13 +6,18 @@ import androidx.appcompat.content.res.AppCompatResources;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.icu.text.SimpleDateFormat;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.androidpu121.Orm.ChatMassage;
 import com.example.androidpu121.Orm.ChatResponse;
@@ -20,11 +25,14 @@ import com.example.androidpu121.Orm.ChatResponse;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -33,6 +41,12 @@ public class ChatActivity extends AppCompatActivity {
     private final String chatUrl = "https://chat.momentfor.fun/";
     private LinearLayout chatContainer;
     private final List<ChatMassage> chatMassages = new ArrayList<>();
+    private ImageButton newMessage;
+    private EditText etNik;
+    private EditText etMessage;
+    private MediaPlayer spawnMessageNew;
+    private Animation newMessageAnimation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +55,83 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
         chatContainer = findViewById(R.id.chat_layout_container);
         new Thread(this::loadChatMessages).start();
+        etNik = findViewById(R.id.chat_et_nik);
+        etMessage = findViewById(R.id.chat_et_message);
+        spawnMessageNew = MediaPlayer.create(ChatActivity.this,R.raw.jump_00);
+        findViewById(R.id.chat_btn_send).setOnClickListener(this::sendButtonClick);
+        newMessage = (ImageButton) findViewById(R.id.chat_btn_newMessage);
+        newMessageAnimation = AnimationUtils.loadAnimation(
+
+                ChatActivity.this,
+                R.anim.chat_new_mesage_anim
+        );
+        newMessageAnimation.reset();
     }
     private void showChatMessages(){
-        boolean self= false;
         for(ChatMassage chatMassage : chatMassages){
-            chatContainer.addView(chatMessageView(chatMassage, self));
-            self = !self;
+            chatContainer.addView(chatMessageView(chatMassage));
+        }
+
+    }
+    private void sendButtonClick(View view){
+        String  nik = etNik.getText().toString();
+        String  message = etMessage.getText().toString();
+        if(nik.isEmpty()){
+            Toast.makeText(this,"Введите ник в чат ",Toast.LENGTH_SHORT).show();
+            etNik.requestFocus();
+            return;
+        }
+        if(message.isEmpty()){
+            Toast.makeText(this,"Введите сообщение",Toast.LENGTH_SHORT).show();
+            etMessage.requestFocus();
+            return;
+        }
+        new Thread(()->sendChatMessage(nik,message)).start();
+    }
+    private void sendChatMessage(String nik,String message){
+        try {
+            //Отправка POST в несколько шагов
+            //1 Настраеваем соединение
+            URL Url = new URL(chatUrl);
+            HttpURLConnection connection = (HttpURLConnection) Url.openConnection();
+            connection.setDoOutput(true); // запрос будет иметь тело
+            connection.setDoInput(true); // ожидается ответ
+            connection.setRequestMethod("POST");
+            // заголовки устанавливаются как RequestProperty
+            connection.setRequestProperty( "Content-Type","application/x-www-form-urlencoded");
+            connection.setRequestProperty( "Accept","*/*");
+            connection.setChunkedStreamingMode(0);//не разделять на блоки (один поток)
+            //2 Формируем запрос - пишем в Output
+            OutputStream connectionOutput = connection.getOutputStream();
+            String body = String.format("author=%s&msg=%s",nik,message);
+            connectionOutput.write(body.getBytes(StandardCharsets.UTF_8));
+            connectionOutput.flush();
+            connectionOutput.close();
+
+            // 3. Получаем Ответ читаем Input;
+            int statusCode = connection.getResponseCode();
+            if(statusCode == 201){// Ответ успех, тут тела не будет
+                Log.d("sendChatMessage ","Request Ok");
+            }else{// answer mistake, message about answer in body
+                InputStream connectionInput = connection.getInputStream();
+                String errorMessage = streamToString(connectionInput);
+                Log.d("sendChatMessage ","Request failed with code "+ statusCode +" "+errorMessage);
+            }
+
+            connection.disconnect();
+            if(statusCode == 201){//if request ok download message
+
+               newMessage.setImageResource(R.drawable.chat_new_message);
+               newMessage.startAnimation(newMessageAnimation);
+               spawnMessageNew.start();
+
+               loadChatMessages();
+            }
+        }catch (Exception ex){
+            Log.d("sendChatMessage ",ex.getMessage());
         }
     }
-    private View chatMessageView(ChatMassage chatMassages,boolean self){
+    private View chatMessageView(ChatMassage chatMassages){
         LinearLayout messageContainer = new LinearLayout(ChatActivity.this);
         messageContainer.setOrientation(LinearLayout.VERTICAL);
         LinearLayout.LayoutParams containerParams = new LinearLayout.LayoutParams(
@@ -65,13 +147,13 @@ public class ChatActivity extends AppCompatActivity {
                 R.drawable.chat_message_self
         );
 
-        if(self){
+        //if(self){
             messageContainer.setBackground(chat_message_self);
             containerParams.gravity = Gravity.END;
-        }else{
-            messageContainer.setBackground(chat_message);
-            containerParams.gravity = Gravity.START;
-        }
+//        }else{
+//            messageContainer.setBackground(chat_message);
+//            containerParams.gravity = Gravity.START;
+//        }
         containerParams.setMargins(15, 3 ,15,3  );
         messageContainer.setPadding(15,5 ,15 ,5);
         messageContainer.setLayoutParams(containerParams);
@@ -125,6 +207,7 @@ public class ChatActivity extends AppCompatActivity {
                     = ChatResponse.fromJson(streamToString((inputStream)));
               // проверяем на новые сообщения. Обновляем коллекцию всех сообщений
             boolean wasNewMessage = false;
+            chatResponse.getData().sort(Comparator.comparing(ChatMassage::getDate));
             for(ChatMassage mess: chatResponse.getData()){
                 if(chatMassages.stream().noneMatch( m->m.getId().equals(mess.getId()) )){
                     //новое сообщение (нкт в коллекции)

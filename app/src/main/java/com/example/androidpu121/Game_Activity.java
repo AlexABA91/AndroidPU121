@@ -138,10 +138,10 @@ public class Game_Activity extends AppCompatActivity {
         //animation
         tvBestScore = findViewById(R.id.game_tv_best);
         sawnCellAnimation = AnimationUtils.loadAnimation(
-                Game_Activity.this,
+
+        Game_Activity.this,
                 R.anim.game_spavn_cell
         );
-
         sawnCellAnimation.reset();
 
         collapseGameAnimation = AnimationUtils.loadAnimation(

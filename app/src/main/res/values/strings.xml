@@ -73,6 +73,8 @@
     <string name="rates_btn_by_reset">Сбросить</string>
 <!-- region chat -->
     <string name="chat_tv_title">Chat</string>
+    <string name="chat_tv_nik">Ник в чате</string>
+    <string name="chat_et_nik">Alex</string>
 
 <!--    endregion-->
 </resources>

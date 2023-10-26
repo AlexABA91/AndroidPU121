@@ -6,7 +6,7 @@
 
     <color name="rate_bg_1">#00BCD4</color>
 
-
+    <color name="chat_other_bg">#BF91F61E</color>
 
     <color name="game_title_background">#E8C95F</color>
     <color name="game_title_foreground">#FEFAFE</color>

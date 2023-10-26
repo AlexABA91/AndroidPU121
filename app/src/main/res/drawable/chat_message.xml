@@ -5,5 +5,5 @@
     <corners android:bottomRightRadius="0dp"/>
     <stroke android:color="#E1AA05"
         android:width="2dp"/>
-    <solid android:color="#BF91F61E"/>
+    <solid android:color="@color/chat_other_bg"/>
 </shape>
